@@ -1,0 +1,20 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">view</view>
+        <view class="comptant_pro">弹性块模型分为弹性弹性容器以及弹性项目，当组件的display为flex和inline-flex时，改组件则为弹性容器，弹性容器的子组件为弹性项目</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group" wx:for="{{views}}">
+            <view class="comptant_group_title">{{item.row?'row':'column'}}:{{item.content}}:{{item.items}}</view>
+            <view class="  section section_gap" >
+                <view style="background:#eee;height:{{item.row? 100:200 }}px;" class="flex flex-direction-{{item.row?'row':'column'}} flex-content-{{item.content}} flex-items-{{item.items}}"> 
+                    <view class="wx_view wx_100  red"> 1</view>
+                    <view class="wx_view wx_200 green">2 </view>
+                    <view class="wx_view wx_300 blue"> 3</view>
+                </view>
+            </view>
+        </view>
+    </view>
+        
+    
+</view>

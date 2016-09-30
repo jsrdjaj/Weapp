@@ -1,0 +1,26 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">picker</view>
+        <view class="comptant_pro">滚动选择器</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">type:switch</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{switch}}">
+                <view class="section__title">{{item.title}}</view>
+                <view class="body-view">
+                    <switch checked="{{item.checked}}" bindchange="{{item.bindchange}}" type="{{item.type?item.type:'switch'}}" disabled="{{item.disabled}}"/>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">type:checkbox</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{checkbox}}">
+                <view class="section__title">{{item.title}}</view>
+                <view class="body-view">
+                    <switch checked="{{item.checked}}" bindchange="{{item.bindchange}}" type="{{item.type?item.type:'switch'}}" disabled="{{item.disabled}}"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

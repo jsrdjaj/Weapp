@@ -1,0 +1,49 @@
+var pageDate={
+  data:{
+    "type":['primary', 'default', 'warn'],
+    size:['default','mini'],
+    plain:[true,false],
+    disabled:[true,false],
+    loading:[true,false],
+    formType:[{type:'submit',value:'提交'},{type:'reset',value:'重置'}],
+    hoverClass:['','other-button-hover'],
+    model:{
+      title:'标题',
+      confirmText:'确定',
+      canceltext:'取消',
+      hidden:true,
+      bindconfirm:'bindconfirm',
+      bindcancel:'bindcancel',
+      content:'测试内容'
+    }
+  },
+  formSubmit:function(e){
+    this.setData({
+      model:{
+        title:'提交数据',
+        confirmText:'确定',
+        canceltext:'取消',
+        hidden:false,
+        bindconfirm:'bindconfirm',
+        bindcancel:'bindcancel',
+        content:'您提交的数据'
+      }
+    })
+  },
+  bindconfirm:function(e){
+    this.setData({
+      model:{
+        hidden:true,
+      }
+    })
+  },
+  bindcancel:function(e){
+    this.setData({
+      model:{
+        hidden:true,
+      }
+    })
+  }
+  
+}
+Page(pageDate)

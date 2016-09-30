@@ -1,0 +1,18 @@
+<view class="page">
+    <view class="component">
+        <view class="component_title">picker</view>
+        <view class="component_pro">滚动选择器</view>
+    </view>
+    <view class="component_cont">
+        <view class="section">
+            <view class="flex flex-direction-row flex-content-between  section_demo">
+                <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                    <view class="picker">
+                        当前选择: {{time}}
+                    </view>
+                </picker>
+            </view>
+             
+        </view>
+    </view>
+</view>

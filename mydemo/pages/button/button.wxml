@@ -1,0 +1,81 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">button</view>
+        <view class="comptant_pro">按钮组件</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">type</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{type}}">
+                <view class="section__title">type:{{item}}</view>
+                <view class="body-view">
+                    <button size="mini" type="{{item}}" >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">size</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{size}}">
+                <view class="section__title">size:{{item}}</view>
+                <view class="body-view">
+                    <button size="{{item}}" type="primary" >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">plain</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{plain}}">
+                <view class="section__title">plain:{{item}}</view>
+                <view class="body-view">
+                    <button size="mini" type="primary" plain="{{item}}" >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">disabled</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{disabled}}">
+                <view class="section__title">disabled:{{item}}</view>
+                <view class="body-view">
+                    <button size="mini" type="primary"  disabled="{{item}}" >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">loading</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{loading}}">
+                <view class="section__title">loading:{{item}}</view>
+                <view class="body-view">
+                    <button size="mini" type="primary"  loading="{{item}}" >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">hover-class</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{hoverClass}}">
+                <view class="section__title">hover-class:{{item}}</view>
+                <view class="body-view">
+                    <button size="mini"  hover-class="{{item}}"  >按钮</button>
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">formType</view>
+            <form bindsubmit="formSubmit">
+                <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                    <view class="section__title">用户名</view>
+                    <view class="body-view">
+                        <input  type="text" placeholder="请输入用户名" name="username"/>
+                    </view>
+                </view>
+                <view class="flex flex-direction-row flex-content-around flex-items-center  section section_gap" >
+                    <view class="body-view" wx:for="{{formType}}">
+                        <button  formType="{{item.type}}" size="mini" type="primary"   >{{item.value}}</button>
+                    </view>
+                </view>
+            </form>
+        </view>
+    </view>
+</view>
+<modal title="{{model.title}}" confirm-text="{{model.confirmText}}" cancel-text="{{model.canceltext}}" hidden="{{model.hidden}}" bindconfirm="{{model.bindconfirm}}" bindcancel="{{model.bindcancel}}">
+    {{model.content}}
+</modal>            

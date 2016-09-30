@@ -1,0 +1,14 @@
+<view class="page">
+    <view class="comptant_cont">
+        <view class="comptant_group"  wx:for="{{pages}}" wx:for-item="item">
+            <view  class="comptant_group_title"  >{{item.name}}</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section index_list_show" wx:for="{{item.children}}"  wx:for-item="itemName">
+                <navigator url="{{itemName.url}}" class="widget">
+                    <text class="widget__name">{{itemName.name}}</text>
+                    <view class="widget__line"></view>
+                </navigator>
+            </view>
+        </view>
+        
+    </view>
+</view>

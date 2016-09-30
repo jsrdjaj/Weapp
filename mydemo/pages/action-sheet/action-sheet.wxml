@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">action-sheet</view>
+        <view class="comptant_pro">从屏幕底部出现的菜单表。</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group" >
+            <view class="  section section_gap" >
+                <button size="mini" type="primary" bindtap="actionSheetTap">弹出action sheet</button>
+            </view>
+            <view class="  section section_gap" >
+                {{selMsg}}
+            </view>
+        </view>
+    </view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <block wx:for="{{actionSheetItems}}">
+            <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+        </block>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+        
+    
+</view>

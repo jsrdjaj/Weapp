@@ -1,0 +1,19 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">text</view>
+        <view class="comptant_pro">文字标签，支持转义符"\"</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">text</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <text>{{text}}</text>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <button size="mini" type="primary" bindtap="add">addline</button>
+                <button size="mini" type="primary" bindtap="remove">removeline</button>
+            </view>
+        </view>
+        
+    </view>
+</view>

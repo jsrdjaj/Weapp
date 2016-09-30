@@ -1,0 +1,10 @@
+@import "../../Common/common.wxss";
+progress{
+    width:100%
+}
+.body-view{
+    flex:2
+}
+.section__title{
+    flex:1
+}
