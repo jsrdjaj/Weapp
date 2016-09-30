@@ -1,0 +1,80 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">swiper</view>
+        <view class="comptant_pro">​滑动面板</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">​滑动面板</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <swiper indicator-dots="{{indicatorDots}}" current="{{current}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}" style="flex:1" bindchange="swiperChange">
+                    <swiper-item >
+                      <view   class="swiper-item red"> 选项一</view>
+                    </swiper-item >
+                    <swiper-item >
+                      <view   class="swiper-item green">选项二</view>
+                    </swiper-item>
+                    <swiper-item >
+                      <view  class="swiper-item blue">选项三 </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+               {{currentMsg}}
+            </view>
+
+        </view>
+        <view class="comptant_group">
+            
+            <view class="comptant_group_title">修改属性</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">面板指示</view>
+                <view class="body-view">
+                    <switch checked="{{indicatorDots}}" bindchange="attrChange" type="switch"  id="indicatorDots"/>
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">自动播放</view>
+                <view class="body-view">
+                    <switch checked="{{autoplay}}" bindchange="attrChange" type="switch"  id="autoplay"/>
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">垂直滑动</view>
+                <view class="body-view">
+                    <switch checked="{{vertical}}" bindchange="attrChange" type="switch"  id="vertical"/>
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">面板跳转</view>
+                <view class="body-view">
+                    <radio-group class="radio-group" bindchange="attrChange" id="current">
+                      <label class="radio" >
+                        <radio value="0" checked="{{current==0}}"/>选项一
+                      </label>
+                      <label class="radio" >
+                        <radio value="1" checked="{{current==1}}"/>选项二
+                      </label>
+                      <label class="radio" >
+                        <radio value="2" checked="{{current==2}}"/>选项三
+                      </label>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">时间间隔</view>
+                <view class="body-view">
+                    <slider bindchange="attrChange" show-value min="1000" max="5000" id="interval"/>
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">动画时长</view>
+                <view class="body-view">
+                    <slider bindchange="attrChange" show-value min="500" max="1500" id="duration"/>
+                </view>
+            </view>
+            
+        </view>
+        
+    </view>
+</view>

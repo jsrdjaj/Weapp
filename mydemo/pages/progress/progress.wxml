@@ -1,0 +1,53 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">progress</view>
+        <view class="comptant_pro">进度条</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">percent</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" wx:for-items="{{percent}}">
+                <view class="section__title">percent:{{item}}</view>
+                <view class="body-view">
+                    <progress percent="{{item}}"  />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">showInfo<text>（默认值：false）</text></view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" wx:for-items="{{showInfo}}">
+                <view class="section__title">showInfo:{{item}}</view>
+                <view class="body-view">
+                    <progress percent="40" show-info="{{item}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">active<text>（默认值：false）</text></view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" wx:for-items="{{active}}">
+                <view class="section__title">active:{{item}}</view>
+                <view class="body-view">
+                    <progress percent="40" active="{{item}}"  />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">strokeWidth<text>（默认值：6）</text></view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" wx:for-items="{{strokeWidth}}">
+                <view class="section__title">strokeWidth:{{item}}</view>
+                <view class="body-view">
+                    <progress percent="40" strokeWidth="{{item}}"  />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">color</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" wx:for-items="{{color}}">
+                <view class="section__title">{{item}}</view>
+                <view class="body-view">
+                    <progress percent="40" color="{{item}}"  />
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

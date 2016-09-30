@@ -1,0 +1,80 @@
+Page({
+  data:{
+    // text:"这是一个页面"
+    value:['',"有初始值"],
+    type:['text', 'number', 'idcard', 'digit', 'time', 'date'],
+    password:[true,false],
+    disabled:[{
+        name:'开启禁用',
+        value:true
+    },{
+        name:'关闭禁用',
+        value:false
+    }],
+    placeholder:[
+        {holder:''},
+        {
+            holder:'请输入表单内容',
+            style:'color:red'
+        },
+        {
+            holder:'请输入表单内容',
+            class:'input-placeholder-other'
+        }
+    ],
+    maxlength:[{
+        name:'限制0',
+        value:'0'
+    },{
+        name:'限制5',
+        value:'5'
+    },{
+        name:'限制10',
+        value:'10'
+    }],
+    autofocus:[{
+        name:'默认',
+        value:false
+    },{
+        name:"自动聚焦",
+        value:true
+    }],
+    focus:false
+  },
+  onLoad:function(options){
+    // 页面初始化 options为页面跳转所带来的参数
+  },
+  onReady:function(){
+    // 页面渲染完成
+  },
+  onShow:function(){
+    // 页面显示
+  },
+  onHide:function(){
+    // 页面隐藏
+  },
+  onUnload:function(){
+    // 页面关闭
+  },
+  bindButtonTap:function(){
+      this.setData({
+          focus:true
+      })
+  },
+  inputFocus:function(e){
+    console.log("inputFocus");
+    console.log(e.detail.value);
+  },
+  inputBlur:function(e){
+    console.log("inputBlur");
+    console.log(e.detail.value);
+  },
+  inputBind:function(e){
+    console.log("inputBind");
+    console.log(e.detail.value);
+  },
+  inputChange:function(e){
+    console.log("inputChange");
+    console.log(e.detail.value);
+  }
+})

@@ -1,0 +1,18 @@
+@import "../../Common/common.wxss";
+swiper{
+    display: block;height: 240px
+}
+.swiper-item{
+    display: block;
+    height: 150px;
+    text-align: center;line-height: 150px;color: #fff
+}
+.section__title{
+    flex:1;
+}
+.body-view{
+    flex:2;text-align: right
+}
+#current{
+    font-size: 12px;vertical-align: middle
+}

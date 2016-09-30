@@ -1,0 +1,4 @@
+@import "../../Common/common.wxss";
+.item_title{
+    font-size: 14px;text-align: center
+}

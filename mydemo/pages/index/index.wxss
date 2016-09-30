@@ -1,0 +1,23 @@
+/**index.wxss**/
+
+@import "../../app.wxss";
+@import "../../../Common/common.wxss";
+
+.index_title{
+  font-size: 14px;
+}
+.container{
+  align-items: flex-start;padding:0;justify-content:flex-start
+}
+.index_list_show{
+  display: block
+}
+.index_list{
+  display: none
+}
+page{
+  overflow: auto
+}
+.widget__name{
+  font-size: 14px
+}
