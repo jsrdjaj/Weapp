@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/action-sheet/action-sheet",
     "pages/index/index",
     "pages/logs/logs",
     "pages/index/index-pages/icon/icon",

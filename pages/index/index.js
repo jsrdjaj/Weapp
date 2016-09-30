@@ -35,7 +35,7 @@ var pageData={
       {
             name:'操作反馈',
             children:[
-                {name:'action-sheet',url:'../action-sheet/actionsheet'},
+                {name:'action-sheet',url:'../action-sheet/action-sheet'},
                 ],
       }
     ]
