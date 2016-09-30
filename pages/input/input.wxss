@@ -1,0 +1,13 @@
+@import "../../../../Common/common.wxss";
+input{
+    border:1px solid #eee;border-radius: 5px;padding:5px 8px;font-size: 12px
+}
+.section__title{
+    flex: 1;
+}
+.body-view{
+    flex: 3
+}
+button{
+    width:50%;margin:5px auto
+}

@@ -1,0 +1,33 @@
+<view class="page">
+    
+    <view class="page__bd">
+        <view class="section section_gap">
+        <text>icon的大小，单位px</text>
+            <view class="group">
+                <block wx:for-items="{{iconSize}}">
+                   <icon type="success" size="{{item}}"/>
+                </block>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+        <text>icon的类型，有效值：success,success_no_circle,info,warn,waiting,cancel,download,search,clear</text>
+            <view class="group">
+                <scroll-view scroll-x>
+                    <block wx:for-items="{{iconType}}">
+                      <icon type="{{item}}" size="45"/>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+        <text>icon的颜色，同css的color</text>
+            <view class="group">
+                <block wx:for-items="{{iconColor}}">
+                   <icon type="success" size="45" color="{{item}}"/>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

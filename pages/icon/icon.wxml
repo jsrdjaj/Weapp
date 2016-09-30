@@ -1,0 +1,39 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">icon</view>
+        <view class="comptant_pro">图标</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">icon:size</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-end  section section_gap" >
+                <block wx:for-items="{{iconSize}}" class="flex flex-content-end">
+                   <view>
+                        <icon type="success" size="{{item}}"/>
+                        <view style="text-align:center" class="item_title">{{item}}px</view>
+                   </view>
+                   
+                </block>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">icon:iconColor</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap"wx:for-items="{{iconColor}}" >
+                        <view class="section__title">iconColor="{{item}}"</view>
+                        <view class="body-view">
+                            <icon type="success" size="40" color="{{item}}"/>
+                        </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">icon:iconType</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap"wx:for-items="{{iconType}}" >
+                        <view class="section__title">iconType="{{item}}"</view>
+                        <view class="body-view">
+                            <icon type="success" size="40" type="{{item}}"/>
+                        </view>
+            </view>
+        </view>
+        
+    </view>
+</view>

@@ -1,0 +1,115 @@
+<view class="page">
+    <view class="comptant comptant_group">
+        <view class="comptant_title">input</view>
+        <view class="comptant_pro">输入框</view>
+    </view>
+    <view class="comptant_cont">
+        <view class="comptant_group">
+            <view class="comptant_group_title">value</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{value}}">
+                <view class="section__title">{{item?item:'无初始值'}}</view>
+                <view class="body-view">
+                   <input value="{{item}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">type</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{type}}">
+                <view class="section__title">type:{{item}}</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容{{item}}" type="{{item}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">password</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">密码框</view>
+                <view class="body-view">
+                   <input placeholder="请输入密码" password />
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">非密码</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容"  />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">disabled</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{disabled}}">
+                <view class="section__title">{{item.name}}</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容" disabled="{{item.value}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">auto-focus</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{autofocus}}">
+                <view class="section__title">{{item.name}}</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容" auto-focus="{{item.value}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">maxlength</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">默认140</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容" />
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" wx:for="{{maxlength}}">
+                <view class="section__title">{{item.name}}</view>
+                <view class="body-view">
+                   <input placeholder="请输入内容" maxlength="{{item.value}}" />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">placeholder</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">无占位符</view>
+                <view class="body-view">
+                   <input />
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">占位符样式</view>
+                <view class="body-view">
+                   <input placeholder="指定placeholder的样式" placeholder-style="color:red"  />
+                </view>
+            </view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">占位样式类</view>
+                <view class="body-view">
+                   <input placeholder="指定placeholder的样式" placeholder-class="input-placeholder-other"  />
+                </view>
+            </view>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">focus</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">无占位符</view>
+                <view class="body-view">
+                   <input placeholder="点击按钮，输入框触发" focus="{{focus}}"/>
+                </view>
+            </view>
+            <button bindtap="bindButtonTap" size="mini" type="primary">使得输入框获取焦点</button>
+        </view>
+        <view class="comptant_group">
+            <view class="comptant_group_title">bind</view>
+            <view class="flex flex-direction-row flex-content-between flex-items-center  section section_gap" >
+                <view class="section__title">bind</view>
+                <view class="body-view">
+                   <input placeholder="输入框为空时占位符" bindblur="inputBlur" bindchange="inputChange"  bindinput="inputBind" bindfocus="inputFocus"/>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+</view>

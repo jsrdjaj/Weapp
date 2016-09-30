@@ -1,0 +1,61 @@
+/**app.wxss**/
+.flex{
+    display: flex;
+}
+.flex-direction-row{
+    flex-direction: row;
+}
+.flex-direction-column{
+    flex-direction: column
+}
+.flex-content-start{
+    justify-content: flex-start;
+}
+.flex-content-end{
+     justify-content: flex-end
+}
+.flex-content-center{
+    justify-content: center;
+}
+.flex-content-between{
+    justify-content: space-between;
+}
+.flex-content-around{
+    justify-content: space-around;
+}
+.flex-items-start{
+    align-items: flex-start
+}
+.flex-items-end{
+    align-items: flex-end
+}
+.flex-items-center{
+    align-items: center;
+}
+.flex-items-baselines{
+    align-items: baselines;
+}
+.flex-items-stretch{
+    align-items: stretch;
+}
+.flex-items-inherit{
+    align-items: inherit;
+}
+.flex-items-initial{
+    align-items: initial;
+}
+.flex-items-unset{
+    align-items: unset;
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.yellow{
+    background: yellow;
+}
+.blue{
+    background: blue
+}

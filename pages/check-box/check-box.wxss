@@ -1,0 +1,4 @@
+@import "../../Common/common.wxss";
+.page{
+    overflow: auto
+}

@@ -1,0 +1,74 @@
+/*common.wxss*/
+@import "../app.wxss";
+.comptant{
+    background: #fff;overflow: hidden;padding: 5px 0
+}
+.comptant_title{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    text-indent: 15px
+}
+.comptant_con{
+    font-size: 14px;
+    color: #666
+}
+.comptant_pro{
+    font-size: 12px;
+    color:#999;
+    width: 95%;
+    margin:5px auto;
+    padding:5px;
+    text-indent: 5px 
+}
+.comptant_group{
+    background: #fff;margin: 10px auto;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-bottom: 5px
+}
+.comptant_group_title{
+    text-indent: 15px;font-size: 16px;color: #333;padding:10px 0;border-bottom: 1px solid #eee;font-weight: bold
+}
+.comptant_group_title text{
+    color:#999;font-size: 12px;font-weight: lighter
+}
+
+.comptant_group .section:last-child::after{
+    height: 0
+}
+.section__title{
+    font-size: 14px
+}
+page{
+    background: #eee;
+}
+
+.wx_100{
+    width: 10%;height:30px
+}
+.wx_200{
+    width: 20%;height:60px
+}
+.wx_300{
+    width:30%;height:90px
+}
+
+
+.wx_view{
+    display: inline-flex;
+}
+.section{
+    position: relative;overflow: hidden;padding:10px 15px;vertical-align: middle
+}
+.section::after{
+    padding-left: 0;
+    left:10px;
+    position:absolute;
+    height: 1px;
+    content: '';
+    bottom: 0;
+    color:red;
+    background-color: #eee;
+    width:100%
+}
+.empty{
+    clear: both;
+}
